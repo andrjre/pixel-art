@@ -13,16 +13,16 @@ sixteenBtn.onclick = function(){
     
 
     //runs loop 
-    for(i = 0; i<16 ; i++){
+    for(i = 0; i<256 ; i++){
 
     //creates box//
     let boxCreate = document.createElement("div")
-    boxCreate.style.border = "solid black 2px";
+    boxCreate.style.border = "solid black 1px";
     boxCreate.classList.add("createdBoxes");
     boxContainer.appendChild(boxCreate)
     }
 
-
+    //fill in on click//
     let createdBoxes = document.getElementsByClassName("createdBoxes")
     for(i = 0; i < 16 ; i++)
     createdBoxes.onclick = function(){
@@ -32,4 +32,3 @@ sixteenBtn.onclick = function(){
 }
 
 
-sixteenBtn.onclick()

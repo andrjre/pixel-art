@@ -5,6 +5,7 @@ height:800px;
 border:solid black 2px;
 margin-inline:auto;
 display: grid;
+grid-template-columns: repeat(16,1fr);
 }
 
 #sixteenBtn{
