@@ -1,11 +1,29 @@
 
-.boxContainer{
+#boxContainer{
 width:800px;
 height:800px;
 border:solid black 2px;
 margin-inline:auto;
+display:grid;
 }
 
-#sixteen{
+#sixteenBtn{
     font-size:20px;
+}
+
+
+#hi{
+    transition: ease-out 2s;
+
+}
+
+#hi:hover{
+    background-color: red;
+    transition: ease-in 0s;
+
+
+}
+
+#hi:active{
+    background-color: black;
 }
