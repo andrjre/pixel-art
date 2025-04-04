@@ -1,3 +1,8 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
 
 #boxContainer{
 width:800px;
@@ -12,6 +17,10 @@ grid-template-columns: repeat(16,1fr);
     font-size:20px;
 }
 
+.buttonRow{
+display: flex;
+justify-content: center;
+}
 
 .createdBoxes{
     transition: ease-out 2s;
