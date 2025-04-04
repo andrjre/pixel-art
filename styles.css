@@ -4,7 +4,7 @@ width:800px;
 height:800px;
 border:solid black 2px;
 margin-inline:auto;
-display:grid;
+display: grid;
 }
 
 #sixteenBtn{
@@ -12,18 +12,18 @@ display:grid;
 }
 
 
-#hi{
+.createdBoxes{
     transition: ease-out 2s;
 
 }
 
-#hi:hover{
+.createdBoxes:hover{
     background-color: red;
     transition: ease-in 0s;
 
 
 }
 
-#hi:active{
+.createdBoxes:active{
     background-color: black;
 }

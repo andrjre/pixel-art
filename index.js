@@ -2,7 +2,6 @@
 
 let sixteenBtn = document.getElementById("sixteenBtn");
 let boxContainer = document.getElementById("boxContainer")
-    
 
 
 
@@ -19,12 +18,18 @@ sixteenBtn.onclick = function(){
     //creates box//
     let boxCreate = document.createElement("div")
     boxCreate.style.border = "solid black 2px";
-    boxCreate.id = "hi";
+    boxCreate.classList.add("createdBoxes");
     boxContainer.appendChild(boxCreate)
-
     }
+
+
+    let createdBoxes = document.getElementsByClassName("createdBoxes")
+    for(i = 0; i < 16 ; i++)
+    createdBoxes.onclick = function(){
+        console.log("hello")
+    }   
     
 }
 
 
-
+sixteenBtn.onclick()
