@@ -28,25 +28,15 @@ increaseBtn.onclick = function(){
     boxContainer.appendChild(boxCreate)
     boxContainer.style.gridTemplateColumns = `repeat(${gridSize},1fr)`
     boxContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
-    if(gridSize >= 32){
-        boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"
-            
-        }
-  
     
+    if (gridSize >64){
+        console.log("too big !")
     }
-
+    else if(gridSize >= 32){
+        boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"   
+        }
+    }
 }
-
-
-
-createdBoxes = document.getElementsByClassName("createdBoxes")
-
-createdBoxes.onclick = function(){
-    console.log("hello")
-}
-
-
 
 
 // find out how to disable the button after being pressed//
