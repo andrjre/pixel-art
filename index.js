@@ -10,13 +10,14 @@ let gridSize = 1;
 increaseBtn.onclick = function(){
     
     //when button is clicked //
-
-    console.log(gridSize)
+    
     gridSize = gridSize * 2;
+    console.log(gridSize)
+
     pixelCount.innerHTML = `${gridSize} x ${gridSize}`;
     let total = gridSize ** 2;
     boxContainer.innerHTML = "" // sets the boxcontainer to 0 every click, resetting the boxes//
-
+    
     //runs loop 
     for(i = 0; i<total ; i++){
 
@@ -27,9 +28,17 @@ increaseBtn.onclick = function(){
     boxContainer.appendChild(boxCreate)
     boxContainer.style.gridTemplateColumns = `repeat(${gridSize},1fr)`
     boxContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+    if(gridSize >= 32){
+        boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"
+            
+        }
+  
+    
     }
 
 }
+
+
 
 createdBoxes = document.getElementsByClassName("createdBoxes")
 
