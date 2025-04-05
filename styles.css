@@ -11,9 +11,6 @@ height:800px;
 border:solid black 2px;
 margin-inline:auto;
 display: grid;
-
-/* the first number in the repeat needs to be the square root of the number in the loop */
-grid-template-columns: repeat(64,1fr);
 }
 
 #sixteenBtn{
