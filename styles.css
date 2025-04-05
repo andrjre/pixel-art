@@ -13,13 +13,19 @@ margin-inline:auto;
 display: grid;
 }
 
-#sixteenBtn{
+#increaseBtn{
     font-size:20px;
 }
 
+#pixelCount{
+    font-size:20px;
+    margin: 0;
+}
+
+
 .buttonRow{
 display: flex;
-justify-content: center;
+justify-content: space-around;
 }
 
 .createdBoxes{

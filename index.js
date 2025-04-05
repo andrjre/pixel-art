@@ -1,17 +1,19 @@
 
 
-let sixteenBtn = document.getElementById("sixteenBtn");
-let boxContainer = document.getElementById("boxContainer")
+let increaseBtn = document.getElementById("increaseBtn");
+let boxContainer = document.getElementById("boxContainer");
+let pixelCount = document.getElementById("pixelCount")
 let gridSize = 1;
 
 
 
-sixteenBtn.onclick = function(){
+increaseBtn.onclick = function(){
     
     //when button is clicked //
 
     console.log(gridSize)
     gridSize = gridSize * 2;
+    pixelCount.innerHTML = `${gridSize} x ${gridSize}`;
     let total = gridSize ** 2;
     boxContainer.innerHTML = "" // sets the boxcontainer to 0 every click, resetting the boxes//
 
