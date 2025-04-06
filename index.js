@@ -10,7 +10,6 @@ document.getElementById("decreaseBtn").disabled = true;
 
 increaseBtn.onclick = function(){
     
-    
     gridSize = gridSize * 2;
     console.log(gridSize)
 
@@ -27,6 +26,9 @@ increaseBtn.onclick = function(){
         if(gridSize >= 32){
             boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"   
         }
+        if(gridSize >= 64){
+            boxCreate.style.border= "1px solid rgba(0, 0, 0, .25)"   
+        } 
     }
 
     if (gridSize >= 64){
