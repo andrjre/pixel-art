@@ -33,7 +33,6 @@ increaseBtn.onclick = function(){
 
     if (gridSize >= 64){
         document.getElementById("increaseBtn").disabled = true;
-        console.log(">=64")
     }
     else if (gridSize <= 64){
         document.getElementById("increaseBtn").disabled = false;
@@ -46,6 +45,14 @@ increaseBtn.onclick = function(){
         document.getElementById("decreaseBtn").disabled = true;
     }
     
+    let clickBoxes = document.getElementsByClassName("createdBoxes");
+
+    for (let i = 0; i < clickBoxes.length; i++) {
+        clickBoxes[i].onclick = function() {
+            clickBoxes[i].style.background = "purple";
+        }
+    }
+
    
 }
 
@@ -83,4 +90,32 @@ decreaseBtn.onclick = function(){
         document.getElementById("increaseBtn").disabled = false;
     }
 
+    let clickBoxes = document.getElementsByClassName("createdBoxes");
+
+    for (let i = 0; i < clickBoxes.length; i++) {
+        clickBoxes[i].onclick = function() {
+            clickBoxes[i].style.background = "purple";
+        }
+    }
+    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 06/04, I think i couldve made this code so much better if i first made the grid and then made functions that adapt the grid, instead of each function making a new grid everytime?

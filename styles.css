@@ -34,13 +34,17 @@ justify-content: space-around;
     background-color: white;
 }
 
+.createdBoxesSelected{
+    background-color: green;
+}
+
 .createdBoxes:hover{
-    background-color: red;
+    background-color: rgb(212, 212, 212);
     transition: ease-in 0s;
 
 
 }
 
 .createdBoxes:active{
-    background-color: black;
+    background-color: rgb(185, 185, 185);
 }
