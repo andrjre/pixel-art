@@ -100,7 +100,9 @@ decreaseBtn.onclick = function(){
     
 }
 
-
+// when go button is pressed
+// create canvas 
+// implement new features like rubber 
 
 
 
