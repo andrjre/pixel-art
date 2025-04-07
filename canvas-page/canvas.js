@@ -9,13 +9,6 @@ let total = 2;
 console.log(gridSize)
 document.getElementById("decreaseBtn").disabled = true;
 
-let likeBtn = document.getElementById("likeBtn");
-
-// make it so likeBnt is disabled if there is no gridSize
-// its not disabling because the html goes before the js so the disabled bit doesnt happen 
-
-
-
 increaseBtn.onclick = function(){
     
     gridSize = gridSize * 2;
@@ -59,13 +52,6 @@ increaseBtn.onclick = function(){
         clickBoxes[i].onclick = function() {
             clickBoxes[i].style.background = "purple";
         }
-    }
-
-    if(gridSize < 3){
-        likeBtn.disabled = true
-    }
-    else if(gridSize > 3){
-        likeBtn.disabled = false
     }
 }
 
@@ -114,12 +100,7 @@ decreaseBtn.onclick = function(){
             clickBoxes[i].style.background = "purple";
         }
     }
-    if(gridSize < 3){
-        likeBtn.disabled = true
-    }
-    else if(gridSize > 3){
-        likeBtn.disabled = false
-    }
+   
 }
 
 // when go button is pressed
