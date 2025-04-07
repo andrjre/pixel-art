@@ -1,13 +1,33 @@
 
 
-const increaseBtn = document.getElementById("increaseBtn");
-const decreaseBtn = document.getElementById("decreaseBtn");
+let increaseBtn = document.getElementById("increaseBtn");
+let decreaseBtn = document.getElementById("decreaseBtn");
 let boxContainer = document.getElementById("boxContainer");
 let pixelCount = document.getElementById("pixelCount")
 let gridSize = 2;
 let total = 2;
+console.log(gridSize)
 document.getElementById("decreaseBtn").disabled = true;
 
+let size = document.getElementById("size");
+
+if(gridSize >= 4){
+    document.getElementById("size").disabled = false;
+}
+else if(gridSize == 2){
+    document.getElementById("size").disabled = true;
+}
+
+
+size.onclick = function(){
+
+    increaseBtn.style.display = "none";
+    decreaseBtn.style.display = "none";
+    size.style.display = "none";
+    pixelCount.style.display = "none";
+   
+}
+    
 increaseBtn.onclick = function(){
     
     gridSize = gridSize * 2;
@@ -53,9 +73,10 @@ increaseBtn.onclick = function(){
         }
     }
 
-   
+    if(gridSize >= 4){
+        document.getElementById("size").disabled = false;
+    }
 }
-
 
 decreaseBtn.onclick = function(){
 
@@ -73,8 +94,13 @@ decreaseBtn.onclick = function(){
         boxContainer.appendChild(boxCreate)
         boxContainer.style.gridTemplateColumns = `repeat(${gridSize},1fr)`
         boxContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+        if(gridSize >= 32){
+            boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"   
+        }
+        if(gridSize >= 64){
+            boxCreate.style.border= "1px solid rgba(0, 0, 0, .25)"   
+        } 
     }
-    
 
     if (gridSize > 4){
         document.getElementById("decreaseBtn").disabled = false;
@@ -97,11 +123,13 @@ decreaseBtn.onclick = function(){
             clickBoxes[i].style.background = "purple";
         }
     }
-    
+    if(gridSize >= 4){
+        document.getElementById("size").disabled = false;
+    }
 }
 
 // when go button is pressed
-// create canvas 
+// remove all other features
 // implement new features like rubber 
 
 
