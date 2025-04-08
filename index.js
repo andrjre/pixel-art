@@ -11,7 +11,6 @@ document.getElementById("decreaseBtn").disabled = true;
 let likeBtn = document.getElementById("likeBtn");
 
 likeBtn.onclick = function(){
-    console.log("hello")
     location.href = "canvas-page/canvas.html"
 }
 
@@ -30,12 +29,16 @@ increaseBtn.onclick = function(){
         boxContainer.appendChild(boxCreate)
         boxContainer.style.gridTemplateColumns = `repeat(${gridSize},1fr)`
         boxContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`
+        
         if(gridSize >= 32){
             boxCreate.style.border= "1px solid rgba(0, 0, 0, .5)"   
         }
         if(gridSize >= 64){
             boxCreate.style.border= "1px solid rgba(0, 0, 0, .25)"   
         } 
+         if(gridSize > 3){
+        likeBtn.disabled = false
+    }
     }
 
     if (gridSize >= 64){
@@ -60,10 +63,8 @@ increaseBtn.onclick = function(){
         }
     }
 
-    if(gridSize > 3){
-        likeBtn.disabled = false
-    }
-   
+
+
 }
 
 decreaseBtn.onclick = function(){
@@ -89,6 +90,11 @@ decreaseBtn.onclick = function(){
             boxCreate.style.border= "1px solid rgba(0, 0, 0, .25)"   
         } 
     }
+    
+    localStorage.setItem = ("gridSize",gridSize);
+    console.log(localStorage)
+
+    //find out how to get local storage to store updated gridsize
 
     if (gridSize > 4){
         document.getElementById("decreaseBtn").disabled = false;
@@ -115,7 +121,11 @@ decreaseBtn.onclick = function(){
     if(gridSize > 3){
         likeBtn.disabled = false
     }
+
+  
 }
+
+
 
 // when go button is pressed
 // remove all other features
