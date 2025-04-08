@@ -6,6 +6,9 @@ let pixelCount = document.getElementById("pixelCount")
 let gridSize = 2;
 let total = 2;
 console.log(gridSize)
+ 
+
+
 document.getElementById("decreaseBtn").disabled = true;
 
 let likeBtn = document.getElementById("likeBtn");
@@ -41,6 +44,7 @@ increaseBtn.onclick = function(){
     }
     }
 
+
     if (gridSize >= 64){
         document.getElementById("increaseBtn").disabled = true;
     }
@@ -64,6 +68,8 @@ increaseBtn.onclick = function(){
     }
 
 
+    localStorage.setItem("gridSize", gridSize) ;
+    console.log(localStorage)
 
 }
 

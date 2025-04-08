@@ -9,6 +9,10 @@ let total = 2;
 console.log(gridSize)
 document.getElementById("decreaseBtn").disabled = true;
 
+localStorage.getItem("gridSize");
+console.log(localStorage)
+
+
 increaseBtn.onclick = function(){
     
     gridSize = gridSize * 2;
