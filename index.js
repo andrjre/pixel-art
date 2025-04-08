@@ -1,5 +1,4 @@
 
-
 let increaseBtn = document.getElementById("increaseBtn");
 let decreaseBtn = document.getElementById("decreaseBtn");
 let boxContainer = document.getElementById("boxContainer");
@@ -11,10 +10,10 @@ document.getElementById("decreaseBtn").disabled = true;
 
 let likeBtn = document.getElementById("likeBtn");
 
-// make it so likeBnt is disabled if there is no gridSize
-// its not disabling because the html goes before the js so the disabled bit doesnt happen 
-
-
+likeBtn.onclick = function(){
+    console.log("hello")
+    location.href = "canvas-page/canvas.html"
+}
 
 increaseBtn.onclick = function(){
     
@@ -61,12 +60,10 @@ increaseBtn.onclick = function(){
         }
     }
 
-    if(gridSize < 3){
-        likeBtn.disabled = true
-    }
-    else if(gridSize > 3){
+    if(gridSize > 3){
         likeBtn.disabled = false
     }
+   
 }
 
 decreaseBtn.onclick = function(){
@@ -114,10 +111,8 @@ decreaseBtn.onclick = function(){
             clickBoxes[i].style.background = "purple";
         }
     }
-    if(gridSize < 3){
-        likeBtn.disabled = true
-    }
-    else if(gridSize > 3){
+
+    if(gridSize > 3){
         likeBtn.disabled = false
     }
 }
@@ -125,7 +120,6 @@ decreaseBtn.onclick = function(){
 // when go button is pressed
 // remove all other features
 // implement new features like rubber 
-
 
 
 

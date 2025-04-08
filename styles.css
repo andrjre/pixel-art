@@ -102,4 +102,9 @@ justify-content: space-around;
     text-decoration: none;
     color:white;
     background-color: green;
+    font-size:10px;
+}
+
+#likeBtn:disabled{
+    background-color: rgb(255, 32, 32);
 }
