@@ -97,8 +97,7 @@ decreaseBtn.onclick = function(){
         } 
     }
     
-    localStorage.setItem = ("gridSize",gridSize);
-    console.log(localStorage)
+   
 
     //find out how to get local storage to store updated gridsize
 
@@ -128,7 +127,9 @@ decreaseBtn.onclick = function(){
         likeBtn.disabled = false
     }
 
-  
+    localStorage.setItem("gridSize", gridSize) ;
+    console.log(localStorage)
+
 }
 
 
