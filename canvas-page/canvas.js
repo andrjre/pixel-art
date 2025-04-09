@@ -23,7 +23,19 @@ console.log(newGrid)
     }
       
    
-    
+    let clickBoxes = document.getElementsByClassName("createdBoxes");
+
+    for (let i = 0; i < clickBoxes.length; i++) {
+        clickBoxes[i].onclick = function() {
+            clickBoxes[i].style.background = "purple";
+        }
+        clickBoxes[i].oncontextmenu = function(click){
+                click.preventDefault();
+                clickBoxes[i].style.background = ""
+            }
+            
+    }
+
 
 // when go button is pressed
 // remove all other features
