@@ -28,6 +28,7 @@ console.log(newGrid)
     let blueBucket = document.getElementById("blueBucket")
     let greenBucket = document.getElementById("greenBucket")
     let yellowBucket = document.getElementById("yellowBucket")
+    let clear = document.getElementById("clear")
     let color;
 
     for (let i = 0; i < clickBoxes.length; i++) {
@@ -53,7 +54,18 @@ console.log(newGrid)
             } 
         yellowBucket.onclick = function(){
                 color = "yellow";
-            }        
+            }     
+            
+//find out how to add in clear function//
+
+        clear.onclick = function(){
+                if(clickBoxes[i].style.background === color){
+                        clickBoxes[i].style.background = "";
+                }
+
+        }    
+
+
     }
 
   
