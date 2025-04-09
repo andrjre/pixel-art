@@ -1,20 +1,28 @@
 
 
-let increaseBtn = document.getElementById("increaseBtn");
-let decreaseBtn = document.getElementById("decreaseBtn");
 let boxContainer = document.getElementById("boxContainer");
 let pixelCount = document.getElementById("pixelCount")
 let gridSize = 2;
-let total = 2;
-console.log(gridSize)
-document.getElementById("decreaseBtn").disabled = true;
+let total = 2 ;
 
 let newGrid = localStorage.getItem("gridSize");
 console.log(localStorage)
+console.log(newGrid)
 
+    for(i = 0; i<total ; i++){
+        boxCreate = document.createElement("div")
+        boxCreate.classList.add("createdBoxes");
+        boxContainer.appendChild(boxCreate)
         boxContainer.style.gridTemplateColumns = `repeat(${newGrid},1fr)`
         boxContainer.style.gridTemplateRows = `repeat(${newGrid}, 1fr)`
+        total = newGrid * newGrid;
 
+        if(newGrid >= 32){
+                boxCreate.style.border = "1px solid rgba(0, 0, 0, .5)"   
+            }
+    }
+      
+   
     
 
 // when go button is pressed
