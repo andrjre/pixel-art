@@ -90,3 +90,22 @@ justify-content: space-around;
 .btn{
     border-radius: 20px;;
 }
+
+#buckets{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.bucket{
+    border:2px black solid;
+    padding:10px;
+    border-radius: 10px;
+    transition: ease-in-out .2s;
+}
+
+.bucket:hover{
+    background-color: grey;
+    color:white;
+    transform: scale(1.2);
+}

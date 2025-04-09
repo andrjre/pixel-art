@@ -115,13 +115,6 @@ decreaseBtn.onclick = function(){
         document.getElementById("increaseBtn").disabled = false;
     }
 
-    let clickBoxes = document.getElementsByClassName("createdBoxes");
-
-    for (let i = 0; i < clickBoxes.length; i++) {
-        clickBoxes[i].onclick = function() {
-            clickBoxes[i].style.background = "purple";
-        }
-    }
 
     if(gridSize > 3){
         likeBtn.disabled = false

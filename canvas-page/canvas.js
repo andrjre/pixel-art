@@ -24,17 +24,39 @@ console.log(newGrid)
       
    
     let clickBoxes = document.getElementsByClassName("createdBoxes");
+    let redBucket = document.getElementById("redBucket")
+    let blueBucket = document.getElementById("blueBucket")
+    let greenBucket = document.getElementById("greenBucket")
+    let yellowBucket = document.getElementById("yellowBucket")
+    let color;
 
     for (let i = 0; i < clickBoxes.length; i++) {
+    
+
         clickBoxes[i].onclick = function() {
-            clickBoxes[i].style.background = "purple";
+            clickBoxes[i].style.background = color;
         }
+
         clickBoxes[i].oncontextmenu = function(click){
                 click.preventDefault();
                 clickBoxes[i].style.background = ""
+        }
+
+        redBucket.onclick = function(){
+            color = "red";
             }
-            
+        blueBucket.onclick = function(){
+                color = "blue";
+            }
+        greenBucket.onclick = function(){
+                color = "green";
+            } 
+        yellowBucket.onclick = function(){
+                color = "yellow";
+            }        
     }
+
+  
 
 
 // when go button is pressed
