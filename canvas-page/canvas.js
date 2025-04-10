@@ -17,7 +17,10 @@ console.log(newGrid)
         boxContainer.style.gridTemplateRows = `repeat(${newGrid}, 1fr)`
         total = newGrid * newGrid;
 
-        if(newGrid >= 32){
+        if(newGrid >= 64){
+                boxCreate.style.border = "1px solid rgba(0, 0, 0, .25)"   
+            }
+            else if(newGrid >= 32){
                 boxCreate.style.border = "1px solid rgba(0, 0, 0, .5)"   
             }
     }
@@ -29,8 +32,11 @@ console.log(newGrid)
     let greenBucket = document.getElementById("greenBucket")
     let yellowBucket = document.getElementById("yellowBucket")
     let clear = document.getElementById("clear")
-    let color;
-
+    let color = "black";
+    
+    blackBucket.onclick = function(){
+        color = "black";
+        }
     redBucket.onclick = function(){
         color = "red";
         }

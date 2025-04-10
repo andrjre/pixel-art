@@ -61,11 +61,7 @@ increaseBtn.onclick = function(){
     
     let clickBoxes = document.getElementsByClassName("createdBoxes");
 
-    for (let i = 0; i < clickBoxes.length; i++) {
-        clickBoxes[i].onclick = function() {
-            clickBoxes[i].style.background = "purple";
-        }
-    }
+   
 
 
     localStorage.setItem("gridSize", gridSize) ;
