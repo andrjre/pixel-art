@@ -35,19 +35,25 @@ console.log(newGrid)
     let color = "black";
     
     blackBucket.onclick = function(){
+        blackBucket.style.backgroundColor = "black"
+        blackBucket.style.color = "white"
         color = "black";
         }
     redBucket.onclick = function(){
+        redBucket.style.backgroundColor = "red"
         color = "red";
         }
     blueBucket.onclick = function(){
-            color = "blue";
+        blueBucket.style.backgroundColor = "blue"
+        color = "blue";
         }
     greenBucket.onclick = function(){
-            color = "green";
+        greenBucket.style.backgroundColor = "green"
+        color = "green";
         } 
     yellowBucket.onclick = function(){
-            color = "yellow";
+        yellowBucket.style.backgroundColor = "yellow"
+        color = "yellow";
         }  
 
         for (let i = 0; i < clickBoxes.length; i++) {
