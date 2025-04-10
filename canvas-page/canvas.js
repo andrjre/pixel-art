@@ -31,42 +31,48 @@ console.log(newGrid)
     let clear = document.getElementById("clear")
     let color;
 
-    for (let i = 0; i < clickBoxes.length; i++) {
+    redBucket.onclick = function(){
+        color = "red";
+        }
+    blueBucket.onclick = function(){
+            color = "blue";
+        }
+    greenBucket.onclick = function(){
+            color = "green";
+        } 
+    yellowBucket.onclick = function(){
+            color = "yellow";
+        }  
+
+        for (let i = 0; i < clickBoxes.length; i++) {
     
 
-        clickBoxes[i].onclick = function() {
-            clickBoxes[i].style.background = color;
-        }
-
-        clickBoxes[i].oncontextmenu = function(click){
-                click.preventDefault();
-                clickBoxes[i].style.background = ""
-        }
-
-        redBucket.onclick = function(){
-            color = "red";
+            clickBoxes[i].onclick = function() {
+                clickBoxes[i].style.background = color;
             }
-        blueBucket.onclick = function(){
-                color = "blue";
+    
+            clickBoxes[i].oncontextmenu = function(click){
+                    click.preventDefault();
+                    clickBoxes[i].style.background = ""
             }
-        greenBucket.onclick = function(){
-                color = "green";
-            } 
-        yellowBucket.onclick = function(){
-                color = "yellow";
-            }     
-            
-//find out how to add in clear function//
+    
+        }
 
         clear.onclick = function(){
-                if(clickBoxes[i].style.background === color){
-                        clickBoxes[i].style.background = "";
-                }
+            console.log("clear")
+              
+            for(i = 0 ; i < clickBoxes.length ; i++){
+                clickBoxes[i].style.background = ""
+                clickBoxes[i].style.transition = "none"
+            }
+              
+        }  
 
-        }    
+
+       
 
 
-    }
+
 
   
 
