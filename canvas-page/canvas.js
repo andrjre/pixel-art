@@ -32,7 +32,7 @@ console.log(newGrid)
     let greenBucket = document.getElementById("greenBucket")
     let yellowBucket = document.getElementById("yellowBucket")
     let clear = document.getElementById("clear")
-    let color;
+    let color = "black";
     
     blackBucket.onclick = function(){
         blackBucket.style.backgroundColor = "black"

@@ -111,6 +111,14 @@ justify-content: space-around;
     cursor:pointer;
 }
 
+.btn:active{
+    transform: scale(1.1);
+    background-color: rgb(56, 56, 56);
+    color:white;
+    cursor:pointer;
+    transition: 0s;
+}
+
 .btn:disabled:hover{
     background-color:rgb(255, 76, 76);
     transform: scale(1);
