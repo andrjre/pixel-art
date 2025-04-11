@@ -32,42 +32,47 @@ console.log(newGrid)
     let greenBucket = document.getElementById("greenBucket")
     let yellowBucket = document.getElementById("yellowBucket")
     let clear = document.getElementById("clear")
-    let color = "black";
+    let color;
     
     blackBucket.onclick = function(){
         blackBucket.style.backgroundColor = "black"
         blackBucket.style.color = "white"
         color = "black";
+        console.log(color)
         }
+
     redBucket.onclick = function(){
         redBucket.style.backgroundColor = "red"
         color = "red";
+        console.log(color)
         }
+
     blueBucket.onclick = function(){
         blueBucket.style.backgroundColor = "blue"
         color = "blue";
         }
+
     greenBucket.onclick = function(){
         greenBucket.style.backgroundColor = "green"
         color = "green";
         } 
+
     yellowBucket.onclick = function(){
         yellowBucket.style.backgroundColor = "yellow"
         color = "yellow";
         }  
+       
+
+
 
         for (let i = 0; i < clickBoxes.length; i++) {
-    
-
             clickBoxes[i].onclick = function() {
                 clickBoxes[i].style.background = color;
             }
-    
             clickBoxes[i].oncontextmenu = function(click){
                     click.preventDefault();
                     clickBoxes[i].style.background = ""
             }
-    
         }
 
         clear.onclick = function(){
@@ -79,7 +84,6 @@ console.log(newGrid)
             }
               
         }  
-
 
        
 
